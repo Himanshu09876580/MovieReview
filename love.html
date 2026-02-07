@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love calculator</title>
+</head>
+<body>
+    <div id="first">
+        <br>
+    <div id="top">
+        <h1>Love Calculator</h1>
+        <h3>Lets find a love match</h3>
+    </div>
+    <div id="mid">
+       <h2>Click button and enter the name of him and her</h2>
+       <button id="bt" onclick="generateChance()">Check Chances</button> 
+       <p id="result" style="font-size: 20px; font-weight: bold; margin-top: 15px;"></p>
+    </div>
+    <br>
+    </div>
+</body>
+<script>
+    function generateChance()
+{
+var n1=prompt("Enter his name");
+var n2=prompt("Enter her name");
+var n=Math.floor(Math.random() * 100) + 1;
+var message=n1+" and "+n2+" have marriage chances of "+n+"%"
+
+document.getElementById("result").innerText = message;
+
+console.log(message);
+}
+</script>
+<style>
+    #top{
+        background-color: blueviolet;
+        border: 2px solid red;
+        display: block;
+    }
+    #mid{
+        background-color: brown;
+        border: 2px solid blue;
+        display: block;
+    }
+    #bt{
+        background-color: yellow;
+        border: 3px solid black;
+    }
+    #first{
+        background-color: yellow;
+        border: 3px solid black;
+    }
+</style>
+</html>
